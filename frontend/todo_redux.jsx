@@ -9,11 +9,6 @@ import { RECEIVE_STEP, RECEIVE_STEPS, REMOVE_STEP } from './actions/step_actions
 
 window.REMOVE_STEP = REMOVE_STEP
 
-
-document.addEventListener("DOMContentLoaded", () => {
-    const root = document.querySelector('#root')
-    ReactDOM.render(<div>5</div>, root)
-})
 const store = configureStore();
 window.store = store;
 window.receiveTodo = receiveTodo
