@@ -30,11 +30,11 @@ export default class TodoListItem extends Component {
     
     render() {
         return (
-            <li>
+            <li className="todo-list-item">
                 <span onClick={this.toggleDetail}>
                     {this.props.todo.title} 
                 </span>
-                <button onClick={this.updateDone}>
+                <button className="float-right" onClick={this.updateDone}>
                     {this.props.todo.done ? "Done" : "Undo"}
                 </button>
                 { this.state.detail ? <TodoDetailViewContainer todo={this.props.todo} removeTodo={this.props.removeTodo} /> : ""}

@@ -34,7 +34,7 @@ export default class TodoForm extends Component {
     render() {
         return (
             <div className="todo-form">
-                <h2>Make a new Todo</h2>
+                <h2 className="form-header">Make a new Todo</h2>
                 <label htmlFor="title">Title
                     <input onChange={this.updateTitle} type="text" name="" id="title" />
                 </label>
@@ -43,7 +43,7 @@ export default class TodoForm extends Component {
                     <input onChange={this.updateBody} type="text" name="" id="body" />
                 </label>
 
-                <button onClick={this.handleSubmit} type="submit">Create Todo</button>
+                <button className="long-button" onClick={this.handleSubmit} type="submit">Create Todo</button>
             </div>
         )
     }
