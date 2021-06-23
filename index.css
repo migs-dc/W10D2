@@ -1,0 +1,27 @@
+li{
+    background-color: white;
+    border: 1px solid lightblue;
+    border-radius: 5px;
+    list-style: none;
+}
+
+body{
+    background-color: lightblue;
+}
+#root{
+    display: flex;
+    justify-content: center;
+}
+
+.todo-header{
+    color: #0097A7;
+    font-weight: bold;
+    text-align: center;
+}
+
+input{
+    display: block;
+}
+label{
+    font-size: 24px;
+}

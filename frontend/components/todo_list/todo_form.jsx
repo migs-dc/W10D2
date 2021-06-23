@@ -10,7 +10,6 @@ export default class TodoForm extends Component {
         }
         this.updateTitle = this.updateTitle.bind(this)
         this.updateBody = this.updateBody.bind(this)
-        this.updateDone = this.updateDone.bind(this)
         this.handleSubmit = this.handleSubmit.bind(this)
     }
 
@@ -26,12 +25,6 @@ export default class TodoForm extends Component {
         })
     }
 
-    updateDone(e){
-        this.setState({
-            done: e.target.value
-        })
-    }
-
     handleSubmit(e){
         debugger
         e.preventDefault()
@@ -40,7 +33,8 @@ export default class TodoForm extends Component {
     }
     render() {
         return (
-            <div>
+            <div className="todo-form">
+                <h2>Make a new Todo</h2>
                 <label htmlFor="title">Title
                     <input onChange={this.updateTitle} type="text" name="" id="title" />
                 </label>
@@ -48,14 +42,6 @@ export default class TodoForm extends Component {
                 <label htmlFor="body">Body
                     <input onChange={this.updateBody} type="text" name="" id="body" />
                 </label>
-
-                {/* <label htmlFor="done">Done
-                    <input onChange={this.updateDone} type="radio" name="status" id="done" value={true}/>
-                </label>
-
-                <label htmlFor="not-done">Not Done
-                    <input onChange={this.updateDone} type="radio" name="status" id="not-done" value={false}/>
-                </label> */}
 
                 <button onClick={this.handleSubmit} type="submit">Create Todo</button>
             </div>

@@ -24,7 +24,7 @@ window.REMOVE_STEP = REMOVE_STEP
 window.receiveStep = receiveStep
 window.removeStep = removeStep
 window.receiveSteps = receiveSteps
-
+window.stepsByTodoId = Selectors.stepsByTodoId
 
 document.addEventListener("DOMContentLoaded", () => {
     const rootElement = document.querySelector('#root')

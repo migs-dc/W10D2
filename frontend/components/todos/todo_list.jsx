@@ -15,10 +15,13 @@ class TodoList extends React.Component{
             todo={todo} key={todo.id}/>
         })
         return (
-            <ul>
-                {todoLis}
-                <TodoForm receiveTodo={this.props.receiveTodo}/>
-            </ul>
+            <div>
+                <h1 className="todo-header">Super Awesome Todo List</h1>
+                <ul>
+                    <TodoForm receiveTodo={this.props.receiveTodo}/>
+                    {todoLis}
+                </ul>
+            </div>
         )
     }
 }
