@@ -1,14 +1,15 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { configureStore } from './store/store'
-
+import Root from './components/root'
 import { receiveTodo, receiveTodos, removeTodo} from './actions/todo_actions'
 import { RECEIVE_TODO, RECEIVE_TODOS, REMOVE_TODO } from './actions/todo_actions'
 import { receiveStep, receiveSteps, removeStep} from './actions/step_actions'
 import { RECEIVE_STEP, RECEIVE_STEPS, REMOVE_STEP } from './actions/step_actions'
+import * as Selectors from './reducers/selectors'
 
 window.REMOVE_STEP = REMOVE_STEP
-
+window.allTodos = Selectors.allTodos;
 const store = configureStore();
 window.store = store;
 window.receiveTodo = receiveTodo
@@ -23,3 +24,9 @@ window.REMOVE_STEP = REMOVE_STEP
 window.receiveStep = receiveStep
 window.removeStep = removeStep
 window.receiveSteps = receiveSteps
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    const rootElement = document.querySelector('#root')
+    ReactDOM.render(<Root store={store}/>, rootElement)
+})

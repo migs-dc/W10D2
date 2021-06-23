@@ -1,6 +1,11 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
+import { TodoListContainer } from './todos/todo_list_container'
 
 function App(){
-    return (<h1>ToDo List</h1>)
+    return (
+        <>
+            <TodoListContainer />
+        </>
+    )
 }
+export default App
