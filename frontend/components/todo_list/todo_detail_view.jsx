@@ -11,8 +11,6 @@ export default class TodoDetailView extends Component {
     render() {
         return (
             <div>
-                <h2>{ this.props.todo.title }</h2>
-                <h3>Body</h3>
                 <p>{ this.props.todo.body }</p>
                 <button onClick={this.removeTodo}>Delete Todo</button> 
             </div>
